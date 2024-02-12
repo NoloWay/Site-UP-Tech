@@ -1,0 +1,32 @@
+#pres {
+    text-align: justify;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#pres p {
+    height: auto;
+}
+
+#uptech {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#uptech img {
+    padding-left: 24.4455px;
+    padding-right: 24.4455px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: local rgba(60, 60, 80, 0.8);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+}

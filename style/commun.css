@@ -1,0 +1,354 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: auto;
+    background-color: white;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: rgba(60, 60, 80, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    flex-wrap: wrap;
+}
+
+header a {
+    width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 80px;
+}
+
+h1 {
+    font-size: 25px;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+    width: 10%;
+    
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(40, 40, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+nav {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    flex-wrap: wrap;
+}
+
+nav a {
+    width: auto;
+    margin: 0 10px;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: rgb(220, 220, 220);
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    font-size: 23px;
+}
+
+main {
+    height: calc(100% - 51px);
+}
+
+.exemplesRealisations {
+    width: 300px;
+    height: 400px;
+    border: 1px solid rgb(220, 220, 220);
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.exemplesRealisations:hover{
+    width: 400px;
+    height: 500px;
+}
+
+.exemplesRealisations:hover p {
+    font-size: 18px; /* Remplacez par la taille de police souhaitée */
+}
+
+.exemplesRealisations:hover h3 {
+    font-size: 32px; /* Remplacez par la taille de police souhaitée */
+}
+
+.exemplesRealisations div {
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(60, 60, 80);
+}
+
+.ex1 {
+    background-image: url("../images/ex_cheval.png");
+
+}
+
+.ex2 {
+    background-image: url("../images/ex_dragon.png");
+
+}
+
+.exemplesRealisations h3 {
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-size: 24px;
+    color: rgb(40, 40, 40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.exemplesRealisations p {
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-size: 14px;
+    color: rgb(40, 40, 40);
+    transition: 0.5s;
+}
+
+footer {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(60, 60, 80);
+    border-top: 1px solid rgb(221, 221, 221);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map {
+    height: 70%;
+    width: 100%;
+}
+
+.map div {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.EndBar {
+    height: 30%;
+    width: 100%;
+    background-color: rgb(60, 60, 80);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.EndBar h1 {
+    width: 20%;
+    margin-left: 0;
+}
+.EndBar ul {
+    list-style-type:none;
+    color: white;
+}
+
+.EndBar li{
+    margin-bottom: 10px;
+}
+
+#LienEndBar {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 20px;
+}
+
+#LienEndBar:hover {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+.separator {
+    position: relative;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(60, 60, 80, 0.4);
+    border-radius: 1px;
+}
+
+.vertical_separator {
+    width: 2px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(60, 60, 80, 0.4);
+    border-radius: 1px;
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.anim.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#adrien {
+    background-image: url("../images/adrien.png");
+    height: 400px;
+    width: 533px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 10px;
+}
+
+#bruu {
+    background-image: url("../images/Bruu.png");
+    height: 300px;
+    width: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 10px;
+}
+
+#adrien2 {
+    background-image: url("../images/adrien2.png");
+    height: 300px;
+    width: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 10px;
+}
+
+#bruu2 {
+    background-image: url("../images/bruu2.png");
+    height: 300px;
+    width: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 10px;
+}
+
+#CR {
+    background-image: url("../images/3_printers.png");
+    height: 350px;
+    width: 466.66px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.text {
+    height: auto;
+    width: 40%;
+    text-align: justify;
+    margin-right: 10px;
+    line-height: 1.8;
+}
+
+.text_img {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-bottom: 40px;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text_long_img {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-bottom: 40px;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text_text {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-bottom: 40px;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text_text h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.horaires {
+    margin-bottom: 10px;
+}
+
+.off10 {
+    left: 10%;
+}
