@@ -27,8 +27,12 @@
                 <a href="contact.html">Contact</a>
                 <a href="reservations.html">Réservations</a>
             </nav>
-            <h1><img class="logo" src="../images/logo_JE.png"></h1>
-            <h1><img class="logo" src="../images/logo_univ.png"></h1>
+            <a href="https://junior-entreprises.com/">
+                <h1><img class="logo" src="../images/logo_JE.png"></h1>
+            </a>
+            <a href="https://www.univ-poitiers.fr/">
+                <h1><img class="logo" src="../images/logo_univ.png"></h1>
+            </a>
         </header>
         <main>
             <div class="header-wrapper" id="div1"></div>
@@ -87,16 +91,57 @@
                 <ul>
                     <li>11 Bd Marie et Pierre Curie, 86360 Chasseneuil-du-Poitou</li>
                     <li>association.uptech@gmail.com</li>
-                    <li>Mentions légales</li>
+                    <li onclick="togglePopup()" id="mentions">Mentions légales</li>
                 </ul>
-                </section>
+            </section>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <p>
+                    <h2>MENTIONS LÉGALES</h2>
+                    <h3>Responsables</h3>
+                    Hébergeur du site web : Université de Poitiers - i-médias, direction des systèmes d'information (DSI) <br>
+                    Directeur de la publication : Président de l'université de Poitiers (actuellement : Virginie Laval) <br>
+                    Responsable éditorial : Phillipe Traoré <br>
+                    Webmaster : Noé Bourgeois <br>
+                    <h3>Traitement des données à caractère personnelles</h3>
+                    Les informations recueillies sur le formulaire disponible sur le site sont enregistrées sous la responsabilité de Noé Bourgeois par UPTech pour permettre la réservation d’une machine.
+                    Les données collectées seront communiquées aux seuls membres du bureau de l’association UPTech. <br>
+                    Les données sont conservées pendant une durée maximale de 1 an, mais pourraient être effacées sous un délai plus court. <br><br>
+                    Toute collecte de données par le biais de ce formulaire est effectuée sur la base de votre consentement. Vous pouvez accéder aux données vous concernant, les rectifier, demander leur effacement ou exercer votre droit à la limitation du traitement de vos données. Vous pouvez également retirer à tout moment votre consentement au traitement de ces données.
+                    Consultez le site cnil.fr pour plus d’informations sur vos droits. <br><br>
+                    Pour exercer ces droits ou pour toute question sur le traitement de vos données dans ce dispositif, vous pouvez contacter Noé Bourgeois aux coordonnées suivantes : <br><br>
+                    association.uptech@gmail.com <br><br>
+                    Si vous estimez, après nous avoir contactés, que vos droits « Informatique et Libertés » ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL. <br>
+                    </p>
+                    <span class="close-button" onclick="togglePopup()">X</span>
+                </div>
+            </div>
+            
+            <!-- Fond obscurci -->
+            <div id="overlay" class="overlay"></div>
+            
+            <script>
+                var popup = document.getElementById("popup");
+                var overlay = document.getElementById("overlay");
+                popup.style.display = "none";
+                overlay.style.display = "none";
+            // Fonction pour afficher ou cacher la popup
+            function togglePopup() {
+                var popup = document.getElementById("popup");
+                var overlay = document.getElementById("overlay");
+                if (popup.style.display === "none") {
+                    popup.style.display = "block";
+                    overlay.style.display = "block";
+                } else {
+                    popup.style.display = "none";
+                    overlay.style.display = "none";
+                }
+            }
+            </script>
         </footer>
         <script src="../script/script.js"></script>
         <script src="../script/calendar.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body>
-
-    
 </html>

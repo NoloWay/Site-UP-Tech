@@ -352,3 +352,50 @@ footer {
 .off10 {
     left: 10%;
 }
+
+.popup-content {
+    padding: 20px;
+}
+
+/* Style pour le fond obscurci */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* couleur noire avec une opacité de 50% */
+    display: none; /* initialement caché */
+}
+
+/* Style pour la boîte de dialogue */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: none; /* initialement caché */
+    z-index: 1000; /* assure que la fenêtre popup est en premier plan */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#mentions:hover {
+    cursor: pointer;
+    font-size: 18px;
+    width: 160px;
+}
+
+#mentions {
+    font-size: 16px;
+    transition: 0.2s;
+    width: 140px;
+}
