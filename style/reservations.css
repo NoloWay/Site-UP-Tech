@@ -137,3 +137,64 @@ th {
 td, th {
     text-align: center;
 }
+
+/*  _________________________________________________________________________________________________________________________________________________  */
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.week {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.days {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+.day {
+    display: grid;
+    place-items: center;
+    width: 150px;
+    height: 70px;
+    flex: 1;
+    border-right: 1px solid #ccc;
+}
+.time-slots {
+    display: flex;
+    flex-direction: column;
+}
+.time-slot {
+    display: flex;
+}
+.time {
+    display: grid;
+    place-items: center;
+    width: 150px;
+    height: 50px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 5px 0;
+}
+
+.navigation-button {
+    background-color: transparent;
+    width: 220px;
+    height: 40px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid rgb(150, 150, 150);
+}
+
+.navigation-button:hover {
+    background-color: rgb(240, 240, 240);
+}

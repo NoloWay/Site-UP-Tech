@@ -16,16 +16,16 @@
 
     <body>
         <header class="header" id="div2">
-            <a href="index.html"> <!-- Ajout de la balise <a> autour du titre -->
+            <a href="index.php"> <!-- Ajout de la balise <a> autour du titre -->
                 <h1><img class="logo" src="../images/logo_UPTech.png"></h1>
             </a>
             <nav>
-                <a href="index.html">Accueil</a>
-                <a href="realisations.html">Réalisations</a>
-                <a href="UP_Tech.html">UP Tech</a>
-                <a href="3D_Forge_Studio.html">3D Forge Studio</a>
-                <a href="contact.html">Contact</a>
-                <a href="reservations.html">Réservations</a>
+                <a href="index.php">Accueil</a>
+                <a href="realisations.php">Réalisations</a>
+                <a href="UP_Tech.php">UP Tech</a>
+                <a href="3D_Forge_Studio.php">3D Forge Studio</a>
+                <a href="contact.php">Contact</a>
+                <a href="reservations.php">Réservations</a>
             </nav>
             <a href="https://junior-entreprises.com/">
                 <h1><img class="logo" src="../images/logo_JE.png"></h1>
@@ -96,7 +96,7 @@
                     window.onload = generateCalendar;
                 </script>
                 
-                <form action="mail_sending.php" id="reservationForm">
+                <form id="reservationForm">
                     <div class="form-group">
                         <label for="nom">Nom complet</label>
                         <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom">
@@ -124,13 +124,66 @@
                             <option>17:00 - 18:00</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Prendre rendez-vous</button>
+                    <button type="submit" class="btn btn-primary" id="submit">Prendre rendez-vous</button>
+                    <script>
+                        document.getElementById('submit').addEventListener('click', function()) {
+                            const nom = document.getElementById('nom').value;
+                            const email = document.getElementById('email').value;
+                            const date = document.getElementById('date').value;
+                            const heure = document.getElementById('heure').value;
+                            echo 'L\'e-mail a été envoyé avec succès.';
+
+                            // Vérifier si tous les champs sont remplis
+                            if (nom && email && date && heure) {
+                                
+                                require 'vendor/autoload.php'; // Inclure la bibliothèque Mailgun
+
+                                use Mailgun\Mailgun;
+
+                                // Vérifier si des données ont été soumises via POST
+
+                                // Récupérer les données du formulaire
+                                $nom = $_POST['nom'];
+                                $email = $_POST['email'];
+                                $Date = $_POST['Date'];
+                                $Heure = $_POST['Heure'];
+
+                                // Créer une instance de Mailgun
+                                $mailgun = new Mailgun('d3b0a4a92850e19b0f8bf4cdc10e7232-19806d14-e60373a4');
+
+                                // Paramètres de l'e-mail
+                                $destinataire = 'nolokotoway@gmail.com';
+                                $expediteur = $email;
+                                $sujet = 'Réservation d\un créneau';
+                                $corps_message = "Nom : $nom\n";
+                                $corps_message .= "Email : $email\n";
+                                $corps_message .= "Date : $Date\n";
+                                $corps_message .= "Heure : $Heure\n";
+
+                                // Paramètres de l'e-mail à envoyer via Mailgun
+                                $params = [
+                                    'from'    => 'Your Name <' . $expediteur . '>',
+                                    'to'      => $destinataire,
+                                    'subject' => $sujet,
+                                    'text'    => $corps_message
+                                ];
+
+                                // Envoyer l'e-mail via Mailgun
+                                $result = $mailgun->messages()->send('sandbox254df1778bd94a0f83685478a77bb401.mailgun.org', $params);
+
+                                // Vérifier si l'e-mail a été envoyé avec succès
+                                if ($result->http_response_code == 200) {
+                                    echo 'L\'e-mail a été envoyé avec succès.';
+                                } else {
+                                    echo 'Une erreur est survenue lors de l\'envoi de l\'e-mail : ' . $result->http_response_body->message;
+                                }
+
+                                
+                            }
+                        }
+                    </script>
                 </form>
             </div>
-
-
-
-
         </main>
         <footer>
             <section class="map">

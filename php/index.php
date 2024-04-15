@@ -14,16 +14,16 @@
 
     <body>
         <header class="header" id="div2">
-            <a href="index.html"> <!-- Ajout de la balise <a> autour du titre -->
+            <a href="index.php"> <!-- Ajout de la balise <a> autour du titre -->
                 <h1><img class="logo" src="../images/logo_UPTech.png"></h1>
             </a>
             <nav>
-                <a href="index.html">Accueil</a>
-                <a href="realisations.html">Réalisations</a>
-                <a href="UP_Tech.html">UP Tech</a>
-                <a href="3D_Forge_Studio.html">3D Forge Studio</a>
-                <a href="contact.html">Contact</a>
-                <a href="reservations.html">Réservations</a>
+                <a href="index.php">Accueil</a>
+                <a href="realisations.php">Réalisations</a>
+                <a href="UP_Tech.php">UP Tech</a>
+                <a href="3D_Forge_Studio.php">3D Forge Studio</a>
+                <a href="contact.php">Contact</a>
+                <a href="reservations.php">Réservations</a>
             </nav>
             <a href="https://junior-entreprises.com/">
                 <h1><img class="logo" src="../images/logo_JE.png"></h1>
