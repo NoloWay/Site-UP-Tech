@@ -1,28 +1,24 @@
-# Project Name
+# Site UP-Tech
 
 ## Description
+This website serves as a showcase for our association, UP-Tech. We utilize our 3D printers to demonstrate the possibilities and capabilities of this technology. Visitors can also conveniently book appointments with us through the site.
 
-[Provide a brief description of your project here]
+## Technologies
 
-## Table of Contents
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- PHP
+- MySQL
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+## Features
 
-## Installation
-
-[Provide instructions on how to install and set up your project]
-
-## Usage
-
-[Explain how to use your project and provide examples]
-
-## Contributing
-
-[Specify how others can contribute to your project]
+- 3D Printing Services
+- Booking System
+- Contact Form
+- About Us
 
 ## License
 
-[Choose an appropriate license for your project and include it here]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
